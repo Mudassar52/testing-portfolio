@@ -3,9 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maryam Islam — Portfolio</title>
+  <title>Maryam Islam — SEO Expert & Digital Marketing Specialist</title>
+  <meta name="description" content="Maryam Islam is an SEO Expert & Digital Marketing Specialist with 2+ years of experience delivering Technical SEO, On-Page SEO, Local SEO and Content Strategy for clients across Pakistan, UAE, USA, UK and South Africa."/>
+  <meta name="keywords" content="SEO expert, digital marketing specialist, technical SEO, on-page SEO, local SEO, e-commerce SEO, link building, Maryam Islam"/>
+  <meta name="author" content="Maryam Islam"/>
+  <link rel="canonical" href="https://example.com/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Maryam Islam — SEO Expert & Digital Marketing Specialist"/>
+  <meta property="og:description" content="Turning search visibility into sustainable business growth. Technical SEO, On-Page SEO, Local SEO, E-commerce SEO & Content Strategy for international clients."/>
+  <meta property="og:image" content="./maryam-islam.jpeg"/>
+  <meta property="og:url" content="https://example.com/"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Maryam Islam — SEO Expert & Digital Marketing Specialist"/>
+  <meta name="twitter:description" content="SEO Expert & Digital Marketing Specialist helping businesses grow organic traffic and search visibility."/>
+  <meta name="twitter:image" content="./maryam-islam.jpeg"/>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maryam Islam",
+    "jobTitle": "SEO Expert & Digital Marketing Specialist",
+    "email": "maryamislam13seo@gmail.com",
+    "image": "./maryam-islam.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rahim Yar Khan",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/maryam-islam13seoexpert",
+      "https://www.facebook.com/share/172NGYWG2T/",
+      "https://www.fiverr.com/s/o8rDgm8"
+    ],
+    "knowsAbout": ["Technical SEO", "On-Page SEO", "Local SEO", "E-commerce SEO", "Content Strategy", "Link Building", "Google Analytics"]
+  }
+  </script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,9 +68,25 @@
       --card:      #ffffff;
       --nav-h:     68px;
       --radius:    14px;
+
+      /* Normalized brand aliases (single source of truth — green is the only accent) */
+      --primary:       var(--blue);
+      --primary-dark:  var(--blue-d);
+      --primary-light: var(--blue-l);
+      --background:    var(--bg);
+      --surface:       var(--card);
     }
 
     html { scroll-behavior: smooth; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -529,6 +586,38 @@
       font-weight: 600;
     }
 
+    /* Hero SEO flow visual */
+    .hero-flow {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: 1.8rem;
+    }
+    .hero-flow-item {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .5rem .9rem;
+      border-radius: 50px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 14px rgba(5,150,105,.08);
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .hero-flow-item i { color: var(--blue); font-size: .82rem; }
+    .hero-flow-final { background: linear-gradient(135deg, var(--blue), var(--blue-d)); color: #fff; }
+    .hero-flow-final i { color: #fff; }
+    .hero-flow-arrow { color: var(--blue-l); font-size: .7rem; opacity: .8; }
+    @media (max-width: 640px) {
+      .hero-flow { justify-content: center; }
+      .hero-flow-item span { display: none; }
+      .hero-flow-item { padding: .55rem; }
+    }
+
     /* &mdash;&mdash; Image &mdash;&mdash; */
     .hero-img-side {
       flex-shrink: 0;
@@ -876,7 +965,7 @@
 
     /* =============== SKILLS SECTION =============== */
     #skills {
-      background: linear-gradient(145deg, #e8f0fe, #f0f6ff);
+      background: linear-gradient(145deg, #ecfdf5, #d1fae5);
       padding: 7rem 6vw;
       position: relative; z-index: 1;
     }
@@ -1026,7 +1115,7 @@
     }
     #services::before {
       content:''; position:absolute; inset:0;
-      background: linear-gradient(180deg, #f0f6ff 0%, var(--white) 20%);
+      background: linear-gradient(180deg, #ecfdf5 0%, var(--white) 20%);
       pointer-events:none;
     }
 
@@ -1212,8 +1301,49 @@
     }
 
     /* =============== PROJECTS =============== */
+    #process {
+      padding: 6rem 6vw;
+      background: var(--bg);
+      position: relative;
+    }
+    .process-wrap { max-width: 1160px; margin: 0 auto; }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .process-step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem 1.5rem;
+      position: relative;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .process-step:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(5,150,105,.12); }
+    .process-num {
+      position: absolute; top: 1.2rem; right: 1.4rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem; font-weight: 900;
+      color: var(--sky2);
+    }
+    .process-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--blue), var(--blue-d));
+      color: #fff; font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .process-step h3 { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: .5rem; }
+    .process-step p { color: var(--muted); font-size: .9rem; line-height: 1.65; }
+    @media (max-width: 900px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .process-grid { grid-template-columns: 1fr; } #process { padding: 4rem 5vw; } }
+
     #projects {
-      background: linear-gradient(160deg, #f0f6ff 0%, #e8f0fe 100%);
+      background: linear-gradient(160deg, #f0faf6 0%, #e6f7ef 100%);
       padding: 7rem 6vw;
       position: relative; z-index: 1;
     }
@@ -1495,7 +1625,7 @@
     }
     #experience::before {
       content:''; position:absolute; inset:0;
-      background: linear-gradient(180deg, #e8f0fe 0%, var(--white) 25%);
+      background: linear-gradient(180deg, #ecfdf5 0%, var(--white) 25%);
       pointer-events:none;
     }
     .exp-wrap { max-width: 900px; margin: 0 auto; position: relative; }
@@ -1562,8 +1692,9 @@
       text-transform: uppercase; letter-spacing: .07em;
     }
     .tl-badge.agency { background: var(--navy); }
-    .tl-badge.freelance { background: #0891b2; }
+    .tl-badge.freelance { background: #16a34a; }
     .tl-badge.current { background: var(--blue); }
+    .tl-badge.completed { background: var(--blue-d); }
     .tl-date {
       font-size: .78rem; color: var(--muted);
       font-weight: 600; margin-left: auto;
@@ -1965,7 +2096,7 @@
     }
     #contact::before {
       content:''; position:absolute; inset:0;
-      background: linear-gradient(180deg, #e8f0fe 0%, var(--white) 30%);
+      background: linear-gradient(180deg, #ecfdf5 0%, var(--white) 30%);
       pointer-events:none;
     }
 
@@ -2362,6 +2493,32 @@
 
 
     /* =============== CASE STUDIES (NEW) =============== */
+    .cs2-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .6rem;
+      margin-bottom: 2.5rem;
+    }
+    .cs2-filter-tab {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      padding: .6rem 1.3rem;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .cs2-filter-tab:hover { border-color: var(--blue); color: var(--blue); }
+    .cs2-filter-tab.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(5,150,105,.25);
+    }
     .cs2-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -2619,9 +2776,8 @@
     <ul class="nav-links">
       <li><a href="#home" class="active"> Home</a></li>
       <li><a href="#about"> About</a></li>
-      <li><a href="#skills"> Skills</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#projects"> Projects</a></li>
+      <li><a href="#projects"> Case Studies</a></li>
       <li><a href="#experience"> Experience</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -2686,7 +2842,6 @@
 
         <div class="hero-socials">
           <a href="https://www.linkedin.com/in/maryam-islam13seoexpert" target="_blank" class="soc-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://creative-maryam-islam.netlify.app/" target="_blank" class="soc-icon" title="Website"><i class="fa-solid fa-globe"></i></a>
           <a href="mailto:maryamislam13seo@gmail.com" class="soc-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="https://wa.me/923082441144" target="_blank" class="soc-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
@@ -2705,6 +2860,18 @@
             <div class="stat-label">+ Clients</div>
           </div>
         </div>
+
+        <div class="hero-flow reveal">
+          <div class="hero-flow-item"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></div>
+          <i class="fa-solid fa-chevron-right hero-flow-arrow"></i>
+          <div class="hero-flow-item"><i class="fa-solid fa-ranking-star"></i><span>Ranking</span></div>
+          <i class="fa-solid fa-chevron-right hero-flow-arrow"></i>
+          <div class="hero-flow-item"><i class="fa-solid fa-arrow-trend-up"></i><span>Traffic</span></div>
+          <i class="fa-solid fa-chevron-right hero-flow-arrow"></i>
+          <div class="hero-flow-item"><i class="fa-solid fa-user-plus"></i><span>Leads</span></div>
+          <i class="fa-solid fa-chevron-right hero-flow-arrow"></i>
+          <div class="hero-flow-item hero-flow-final"><i class="fa-solid fa-chart-line"></i><span>Growth</span></div>
+        </div>
       </div>
 
       <!-- Image -->
@@ -2716,12 +2883,12 @@
           <div class="img-gap"></div>
           <div class="img-circle">
             <img
-              src="./maryam islam.jpeg"
+              src="./maryam-islam.jpeg"
               alt="Maryam Islam"
             />
           </div>
           <div class="chip chip1">
-            <i class="fa-solid fa-circle-check"></i> Available for Work
+            <i class="fa-solid fa-circle-check"></i> Available for New Projects
           </div>
           <div class="chip chip2">
             <i class="fa-solid fa-star"></i> SEO Expert
@@ -2732,6 +2899,7 @@
     </div>
 
   </section>
+
 
   <!-- ======== ABOUT ======== -->
   <section id="about">
@@ -2755,7 +2923,7 @@
                 <div class="about-grad-border"></div>
                 <div class="about-img-gap"></div>
                 <div class="about-img-circle">
-                  <img src="./maryam islam.jpeg" alt="Maryam Islam"/>
+                  <img src="./maryam-islam.jpeg" alt="Maryam Islam"/>
                 </div>
               </div>
             </div>
@@ -2776,7 +2944,7 @@
             <div class="about-info-row">
               <i class="fa-solid fa-location-dot"></i>
               <span class="lbl">Location:</span>
-              <span class="val"><a href="https://creative-maryam-islam.netlify.app/#" target="_blank">Rahim Yar Khan, Punjab</a></span>
+              <span class="val">Rahim Yar Khan, Punjab</span>
             </div>
             <div class="about-info-row">
               <i class="fa-solid fa-envelope"></i>
@@ -3195,6 +3363,56 @@
     </div>
   </section>
 
+  <!-- ======== SEO PROCESS ======== -->
+  <section id="process">
+    <div class="process-wrap">
+      <div class="reveal" style="text-align:center">
+        <div class="section-tag" style="justify-content:center"><i class="fa-solid fa-route"></i> How I Work</div>
+        <h2 class="section-title" style="text-align:center">My SEO <span class="grad">Process</span></h2>
+        <p style="color:var(--muted);font-size:.97rem;max-width:520px;margin:.6rem auto 0;line-height:1.75;">A clear, repeatable process I follow on every project — from first audit to compounding growth.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <span class="process-num">01</span>
+          <div class="process-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Discovery</h3>
+          <p>Understand the business, goals, target audience, and current search visibility.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">02</span>
+          <div class="process-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>SEO Audit</h3>
+          <p>Full technical, on-page and content audit to uncover what's holding rankings back.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">03</span>
+          <div class="process-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>Strategy</h3>
+          <p>Build a prioritized, keyword-driven roadmap tailored to the site's opportunities.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">04</span>
+          <div class="process-icon"><i class="fa-solid fa-gears"></i></div>
+          <h3>Implementation</h3>
+          <p>Execute technical fixes, on-page changes, content and link-building work.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">05</span>
+          <div class="process-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Monitoring</h3>
+          <p>Track rankings, traffic and indexing weekly to catch issues early and adjust fast.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num">06</span>
+          <div class="process-icon"><i class="fa-solid fa-file-invoice"></i></div>
+          <h3>Reporting &amp; Growth</h3>
+          <p>Clear monthly reports on what changed, what's working, and what's next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ======== PROJECTS / CASE STUDIES (NEW) ======== -->
   <section id="projects">
     <div class="projects-wrap">
@@ -3203,6 +3421,18 @@
         <div class="section-tag" style="justify-content:center"><i class="fa-solid fa-briefcase"></i> Portfolio</div>
         <h2 class="section-title" style="text-align:center;margin-bottom:.8rem">Case <span class="grad">Studies</span></h2>
         <p>Eight real SEO service areas, eight real results &mdash; click any card to open the full case study</p>
+      </div>
+
+      <div class="cs2-filters reveal" role="tablist" aria-label="Filter case studies by service">
+        <button class="cs2-filter-tab active" data-filter="all">All</button>
+        <button class="cs2-filter-tab" data-filter="technical">Technical SEO</button>
+        <button class="cs2-filter-tab" data-filter="onpage">On-Page SEO</button>
+        <button class="cs2-filter-tab" data-filter="local">Local SEO</button>
+        <button class="cs2-filter-tab" data-filter="ecommerce">E-commerce SEO</button>
+        <button class="cs2-filter-tab" data-filter="content">Content SEO</button>
+        <button class="cs2-filter-tab" data-filter="offpage">Off-Page SEO</button>
+        <button class="cs2-filter-tab" data-filter="audit">SEO Audit</button>
+        <button class="cs2-filter-tab" data-filter="analytics">Analytics</button>
       </div>
 
       <div class="cs2-grid" id="csGrid">
@@ -3340,8 +3570,8 @@
           <div class="tl-dot"><i class="fa-solid fa-building-columns"></i></div>
           <div class="tl-card">
             <div class="tl-meta">
-              <span class="tl-badge current">Continue</span>
-              <span class="tl-date"><i class="fa-regular fa-calendar"></i> Completion: 8 June 2026</span>
+              <span class="tl-badge completed"><i class="fa-solid fa-circle-check" style="margin-right:.3rem"></i>Completed</span>
+              <span class="tl-date"><i class="fa-regular fa-calendar"></i> Completed: 8 June 2026</span>
             </div>
             <h3>IT Intern</h3>
             <div class="tl-org"><i class="fa-solid fa-location-dot"></i> CM Punjab IT Internship Program</div>
@@ -3465,7 +3695,7 @@
           <h3 class="ach-title">IT Internship Completion</h3>
           <div class="ach-issuer">CM Punjab Initiative</div>
           <p class="ach-desc">A government-sponsored IT internship program under the Chief Minister Punjab initiative, focused on practical IT skills and real-world project experience.</p>
-          <span class="ach-status pending"><i class="fa-regular fa-clock"></i> Expected June 2026</span>
+           <span class="ach-status"><i class="fa-solid fa-circle-check"></i> Completed</span>
         </div>
 
       </div>
@@ -3534,7 +3764,7 @@
 
         <!-- Company 2: Freelance -->
         <div class="comp-card slide-right">
-          <div class="comp-logo-box" style="background:linear-gradient(135deg,#0891b2,#0e7490)">
+          <div class="comp-logo-box" style="background:linear-gradient(135deg,#059669,#047857)">
             <i class="fa-solid fa-laptop-code"></i>
           </div>
           <div class="comp-card-content">
@@ -3604,13 +3834,77 @@
         </div>
         <div class="cs-stat">
           <div class="cs-icon"><i class="fa-solid fa-globe"></i></div>
-          <div class="cs-num">4</div>
+          <div class="cs-num">5</div>
           <div class="cs-label">Countries</div>
         </div>
       </div>
 
     </div>
   </section>
+
+  <!-- ======== INTERNATIONAL EXPERIENCE ======== -->
+  <section id="international" style="padding: 5rem 6vw; background: var(--bg);">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="reveal" style="text-align:center">
+        <div class="section-tag" style="justify-content:center"><i class="fa-solid fa-earth-americas"></i> Global Reach</div>
+        <h2 class="section-title" style="text-align:center">Working With Businesses <span class="grad">Worldwide</span></h2>
+        <p style="color:var(--muted);font-size:.95rem;max-width:520px;margin:.6rem auto 0;line-height:1.75;">Remote SEO consulting delivered to clients across five countries, with clear communication and consistent reporting.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;margin-top:2.6rem;">
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.8rem;text-align:center;min-width:150px;box-shadow:0 6px 18px rgba(5,150,105,.06);transition:transform .3s;">
+          <img src="https://flagcdn.com/w80/pk.png" srcset="https://flagcdn.com/w160/pk.png 2x" width="48" alt="Pakistan flag" loading="lazy" style="border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15);display:block;margin:0 auto;">
+          <div style="font-weight:700;color:var(--navy);margin-top:.6rem;font-size:.9rem;">Pakistan</div>
+        </div>
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.8rem;text-align:center;min-width:150px;box-shadow:0 6px 18px rgba(5,150,105,.06);transition:transform .3s;">
+          <img src="https://flagcdn.com/w80/ae.png" srcset="https://flagcdn.com/w160/ae.png 2x" width="48" alt="UAE flag" loading="lazy" style="border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15);display:block;margin:0 auto;">
+          <div style="font-weight:700;color:var(--navy);margin-top:.6rem;font-size:.9rem;">UAE</div>
+        </div>
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.8rem;text-align:center;min-width:150px;box-shadow:0 6px 18px rgba(5,150,105,.06);transition:transform .3s;">
+          <img src="https://flagcdn.com/w80/us.png" srcset="https://flagcdn.com/w160/us.png 2x" width="48" alt="USA flag" loading="lazy" style="border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15);display:block;margin:0 auto;">
+          <div style="font-weight:700;color:var(--navy);margin-top:.6rem;font-size:.9rem;">USA</div>
+        </div>
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.8rem;text-align:center;min-width:150px;box-shadow:0 6px 18px rgba(5,150,105,.06);transition:transform .3s;">
+          <img src="https://flagcdn.com/w80/gb.png" srcset="https://flagcdn.com/w160/gb.png 2x" width="48" alt="UK flag" loading="lazy" style="border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15);display:block;margin:0 auto;">
+          <div style="font-weight:700;color:var(--navy);margin-top:.6rem;font-size:.9rem;">UK</div>
+        </div>
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.8rem;text-align:center;min-width:150px;box-shadow:0 6px 18px rgba(5,150,105,.06);transition:transform .3s;">
+          <img src="https://flagcdn.com/w80/za.png" srcset="https://flagcdn.com/w160/za.png 2x" width="48" alt="South Africa flag" loading="lazy" style="border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15);display:block;margin:0 auto;">
+          <div style="font-weight:700;color:var(--navy);margin-top:.6rem;font-size:.9rem;">South Africa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== RESULTS THAT MATTER ======== -->
+  <section id="results" style="padding: 6rem 6vw; background: linear-gradient(160deg, #f0faf6 0%, #e6f7ef 100%);">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="reveal" style="text-align:center">
+        <div class="section-tag" style="justify-content:center"><i class="fa-solid fa-bullseye"></i> Proof, Not Promises</div>
+        <h2 class="section-title" style="text-align:center">Results That <span class="grad">Matter</span></h2>
+        <p style="color:var(--muted);font-size:.95rem;max-width:540px;margin:.6rem auto 0;line-height:1.75;">Real outcomes pulled directly from the case studies above &mdash; every number is tied to a named project.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;margin-top:3rem;">
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.6rem;text-align:center;box-shadow:0 10px 30px rgba(5,150,105,.08);">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.2rem;color:var(--blue);">+85%</div>
+          <div style="color:var(--muted);font-size:.88rem;margin-top:.4rem;">Organic Traffic <br><span style="font-size:.78rem;">PlantMarket.pk</span></div>
+        </div>
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.6rem;text-align:center;box-shadow:0 10px 30px rgba(5,150,105,.08);">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.2rem;color:var(--blue);">+60%</div>
+          <div style="color:var(--muted);font-size:.88rem;margin-top:.4rem;">Page 1 Rankings <br><span style="font-size:.78rem;">Dapper-Co</span></div>
+        </div>
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.6rem;text-align:center;box-shadow:0 10px 30px rgba(5,150,105,.08);">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.2rem;color:var(--blue);">+140%</div>
+          <div style="color:var(--muted);font-size:.88rem;margin-top:.4rem;">Maps Visibility &amp; Traffic <br><span style="font-size:.78rem;">Sell Your Home DC</span></div>
+        </div>
+        <div class="reveal" style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.6rem;text-align:center;box-shadow:0 10px 30px rgba(5,150,105,.08);">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.2rem;color:var(--blue);">30+</div>
+          <div style="color:var(--muted);font-size:.88rem;margin-top:.4rem;">Keywords Ranked <br><span style="font-size:.78rem;">PlantMarket.pk</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
 
@@ -3638,7 +3932,7 @@
             <i class="fa-solid fa-star"></i>
           </div>
           <p class="testi-text">
-            "Maryam ne humari website ki SEO bilkul waisi handle ki jaise hum chahte thay. Rankings improve huin, kaam time par deliver hua, aur reporting bilkul clear thi. Highly professional!"
+            "Maryam handled our website's SEO exactly the way we wanted. Rankings improved, work was delivered on time, and the reporting was completely clear. Highly professional!"
           </p>
           <span class="testi-result-chip"><i class="fa-solid fa-arrow-trend-up"></i> +140% Organic Traffic</span>
           <div class="testi-client">
@@ -3813,6 +4107,19 @@
       </div>
     </div>
   </section>
+
+  <!-- ======== FREE SEO AUDIT CTA ======== -->
+  <section id="audit-cta" style="padding: 5rem 6vw; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-d) 100%); position: relative; overflow: hidden;">
+    <div style="position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.06);top:-140px;left:-100px;pointer-events:none;"></div>
+    <div style="position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);bottom:-120px;right:-60px;pointer-events:none;"></div>
+    <div class="reveal" style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:1rem;">Not Sure What's Holding Your Website Back?</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:1rem;line-height:1.75;margin-bottom:2rem;">Let's identify the SEO opportunities, technical issues, and growth potential of your website.</p>
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:var(--blue);font-weight:800;font-size:.95rem;padding:.9rem 2.2rem;border-radius:50px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.2);transition:transform .25s, box-shadow .25s;" onmouseenter="this.style.transform='translateY(-3px)'" onmouseleave="this.style.transform='none'">
+        <i class="fa-solid fa-magnifying-glass-chart"></i> Request SEO Audit
+      </a>
+    </div>
+  </section>
   <!-- ======== CONTACT ======== -->
   <section id="contact">
     <div class="contact-wrap">
@@ -3852,7 +4159,7 @@
             <div class="cd-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <div class="cd-label">Location</div>
-              <div class="cd-val"><a href="https://creative-maryam-islam.netlify.app/#" target="_blank">Rahim Yar Khan, Punjab</a> 🇵🇰</div>
+              <div class="cd-val">Rahim Yar Khan, Punjab 🇵🇰</div>
             </div>
           </div>
 
@@ -3867,7 +4174,6 @@
           <!-- Social Links -->
           <div class="contact-socials">
             <a href="https://www.linkedin.com/in/maryam-islam13seoexpert" target="_blank" class="cs-link"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-            <a href="https://creative-maryam-islam.netlify.app/" target="_blank" class="cs-link"><i class="fa-solid fa-globe"></i> Website</a>
             <a href="mailto:maryamislam13seo@gmail.com" class="cs-link"><i class="fa-solid fa-envelope"></i> Email</a>
             <a href="https://wa.me/923082441144" target="_blank" class="cs-link" style="background:#dcfce7;border-color:#86efac;">
               <i class="fa-brands fa-whatsapp" style="color:#16a34a"></i> WhatsApp
@@ -3880,11 +4186,7 @@
           <h4>Send Message</h4>
           <p class="sub">Share your project details — I'll be happy to help 😊</p>
 
-          <form target="_blank" action="https://formsubmit.co/maryamislam13seo@gmail.com" method="POST">
-            <!-- Honeypot anti-spam -->
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
-
+          <form id="contactForm">
             <div class="form-row">
               <div class="form-field" style="margin-bottom:0">
                 <label class="form-label">Full Name</label>
@@ -3896,27 +4198,46 @@
               </div>
             </div>
 
+            <div class="form-row">
+              <div class="form-field" style="margin-bottom:0">
+                <label class="form-label">Website URL</label>
+                <input type="url" name="website" class="form-control" placeholder="https://yoursite.com">
+              </div>
+              <div class="form-field" style="margin-bottom:0">
+                <label class="form-label">Project Budget</label>
+                <select name="budget" class="form-select">
+                  <option value="">-- Select a range --</option>
+                  <option>Under $500</option>
+                  <option>$500 &ndash; $1,000</option>
+                  <option>$1,000 &ndash; $3,000</option>
+                  <option>$3,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
             <div class="form-field">
               <label class="form-label">What Service Do You Need?</label>
-              <select name="service" class="form-select">
+              <select name="service" class="form-select" required>
                 <option value="">-- Select a service --</option>
-                <option>Technical SEO Audit</option>
-                <option>On-Page Optimization</option>
-                <option>Local SEO Campaign</option>
+                <option>Technical SEO</option>
+                <option>On-Page SEO</option>
+                <option>Local SEO</option>
+                <option>E-commerce SEO</option>
                 <option>Content Strategy</option>
-                <option>Analytics & Reporting</option>
-                <option>SEO Website Refresh</option>
+                <option>Link Building</option>
+                <option>SEO Audit</option>
                 <option>Other</option>
               </select>
             </div>
 
             <div class="form-field">
-              <label class="form-label">Your Message</label>
-              <textarea name="message" class="form-control" placeholder="Share your project details — budget, deadline, requirements..." rows="5" required></textarea>
+              <label class="form-label">Project Details</label>
+              <textarea name="message" class="form-control" placeholder="Share your project details — deadline, goals, requirements..." rows="5" required></textarea>
             </div>
 
             <button type="submit" class="btn-submit">
-              <i class="fa-solid fa-paper-plane"></i> Send Message
+              <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
             </button>
           </form>
         </div>
@@ -3949,7 +4270,7 @@
           <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
           <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Me</a></li>
           <li><a href="#skills"><i class="fa-solid fa-chevron-right"></i> My Skills</a></li>
-          <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i> Projects</a></li>
+          <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i> Case Studies</a></li>
           <li><a href="#experience"><i class="fa-solid fa-chevron-right"></i> Experience</a></li>
           <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
         </ul>
@@ -3983,9 +4304,9 @@
             </a>
           </li>
           <li>
-            <a href="https://creative-maryam-islam.netlify.app/#" target="_blank">
+            <span>
               <i class="fa-solid fa-location-dot"></i> Rahim Yar Khan, Punjab, Pakistan
-            </a>
+            </span>
           </li>
           <li>
             <a href="#">
@@ -4369,6 +4690,52 @@
     if (csCloseBtn) csCloseBtn.addEventListener('click', closeCaseStudy);
     if (csOverlay) csOverlay.addEventListener('click', (e) => { if (e.target === csOverlay) closeCaseStudy(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCaseStudy(); });
+
+    /* &mdash;&mdash; Case Study Category Filters &mdash;&mdash; */
+    const csFilterTabs = document.querySelectorAll('.cs2-filter-tab');
+    const csCards = document.querySelectorAll('.cs2-card');
+    csFilterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        csFilterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        csCards.forEach(card => {
+          const match = filter === 'all' || card.dataset.study === filter;
+          card.style.display = match ? '' : 'none';
+        });
+      });
+    });
+
+    /* &mdash;&mdash; Contact Form: Send to WhatsApp &mdash;&mdash; */
+    (function() {
+      const contactForm = document.getElementById('contactForm');
+      if (!contactForm) return;
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+        const name = contactForm.name.value.trim();
+        const email = contactForm.email.value.trim();
+        const website = contactForm.website.value.trim();
+        const budget = contactForm.budget.value.trim();
+        const service = contactForm.service.value.trim();
+        const message = contactForm.message.value.trim();
+
+        let text = "Hello Maryam, I would like to request a free SEO consultation.\n\n";
+        text += "Name: " + name + "\n";
+        text += "Email: " + email + "\n";
+        if (website) text += "Website: " + website + "\n";
+        text += "Service Needed: " + (service || "Not specified") + "\n";
+        if (budget) text += "Budget: " + budget + "\n";
+        text += "\nProject Details:\n" + message;
+
+        const waUrl = "https://wa.me/923082441144?text=" + encodeURIComponent(text);
+        window.open(waUrl, '_blank');
+        contactForm.reset();
+      });
+    })();
 
     /* &mdash;&mdash; Testimonials Scroll Carousel &mdash;&mdash; */
     (function() {
